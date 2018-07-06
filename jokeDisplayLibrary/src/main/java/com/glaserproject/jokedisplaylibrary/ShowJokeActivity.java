@@ -34,7 +34,7 @@ public class ShowJokeActivity extends AppCompatActivity {
             getSupportActionBar().hide();
         }
         //check if message is null, if not, set dummy string
-        if (getIntent().getStringExtra("joke key") == null){
+        if (!getIntent().hasExtra("joke key")){
             joke = getString(R.string.no_joke_message);
         } else {
             //set joke String from Intent
